@@ -34,7 +34,6 @@ public class RedTintFilter extends Filter
                 int green = pix.getGreen(); 
                 if (red <= 255) {
                     red = red; 
-                    
                 }
                 image.setPixel(x, y, new Color(red, 127, 127)); 
             }
