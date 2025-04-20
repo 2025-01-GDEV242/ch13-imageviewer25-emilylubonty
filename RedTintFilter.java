@@ -9,6 +9,8 @@ public class RedTintFilter extends Filter
 {
     /**
      * Constructor for objects of class RedTintFilter
+     * 
+     * @param name Name of the filter. 
      */
     public RedTintFilter(String name)
     {
@@ -17,10 +19,9 @@ public class RedTintFilter extends Filter
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Apply the red tint filter to the image
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @param image Image to be modified by the filter. 
      */
     public void apply(OFImage image)
     {
