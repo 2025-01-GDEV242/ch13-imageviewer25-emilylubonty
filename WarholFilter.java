@@ -8,9 +8,6 @@ import java.awt.Color;
  */
 public class WarholFilter extends Filter
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
     /**
      * Constructor for objects of class WarholFilter
      * 
@@ -22,26 +19,20 @@ public class WarholFilter extends Filter
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Applies the Warhol filter to the image
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @param image The image to be modified by the filter. 
      */
     public void apply(OFImage image)
     {
-        int height = image.getHeight(); 
-        int width = image.getWidth();  
+        int height = image.getHeight() / 4; 
+        int width = image.getWidth() / 4;
         
         for (int y = 0; y < height; y++){
             for (int x = 0; x < width; x++) {
-                Color pix = image.getPixel(x * 4, y * 4); 
-                 
-                
-                int red = pix.getRed(); 
-                int blue = pix.getBlue(); 
-                int green = pix.getGreen(); 
-                
-                image.setPixel(x, y, new Color(red, green, blue));
+                Color pix = image.getPixel(x, y);
+            
+                image.setPixel(x, y, image.getPixel(x, y));
                 
             }
         }

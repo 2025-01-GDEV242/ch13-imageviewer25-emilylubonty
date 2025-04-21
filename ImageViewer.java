@@ -127,6 +127,7 @@ public class ImageViewer
             frame.repaint();
             showStatus("Applied: " + filter.getName());
         }
+        
         else {
             showStatus("No image loaded.");
         }
